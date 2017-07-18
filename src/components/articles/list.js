@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import request from '../../request';
 import { ARTICLES_QUERY } from '../../queries';
 import ArticleItem from './item.js';
+import './list.css';
 
 class ArticleList extends Component {
       // definition
@@ -23,7 +24,7 @@ class ArticleList extends Component {
             return <ArticleItem article={article} />
         })
 
-        return <div className="article-list">
+        return <div className="article-list-container">
                 {articleComponents}
             </div>
     }

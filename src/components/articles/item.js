@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './item.css';
 
 class ArticleItem extends Component {
     constructor(props) {
@@ -8,10 +9,10 @@ class ArticleItem extends Component {
         };
     }
     render() {
-        return <div className="article-item">
+        return <div className="article-item-container">
                 <h3>{this.state.article.title}</h3>
                 <p>{this.state.article.author}</p>
-                <p>{this.state.article.excerpt}</p>
+                <p className="article-item-excerpt">{this.state.article.excerpt}</p>
             </div>
     }
 }

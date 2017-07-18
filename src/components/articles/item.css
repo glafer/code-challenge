@@ -1,0 +1,16 @@
+.article-item-container {
+    height: 200px;
+    width: 300px;
+    margin: 1.5em; 
+    display: inline-block;;
+    border: solid 1px grey;
+    padding: 15px;
+    text-align: left;
+}
+
+.article-item-excerpt {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical; 
+}
