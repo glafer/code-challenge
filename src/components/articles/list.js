@@ -21,7 +21,7 @@ class ArticleList extends Component {
     }
     render() {
         let articleComponents = this.state.articles.map(function (article) {
-            return <ArticleItem article={article} />
+            return <ArticleItem key={`article-${article.id}`} article={article} />
         })
 
         return <div className="article-list-container">

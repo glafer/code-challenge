@@ -7,3 +7,11 @@ export default function(query) {
       .catch(error => reject(error));
   });
 }
+
+export function mutation(mutation) {
+  return new Promise((resolve, reject) => {
+    axios.post('http://localhost:4000/graphql', { mutation })
+      .then(response => resolve(response.data))
+      .catch(error => reject(error));
+  });
+}

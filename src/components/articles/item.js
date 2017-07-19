@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './item.css';
 
 class ArticleItem extends Component {
@@ -9,11 +10,15 @@ class ArticleItem extends Component {
         };
     }
     render() {
-        return <div className="article-item-container">
+        console.log(this.state.article.id)
+        return <Link to={`/${this.state.article.id}`}>
+            <div className="article-item-container">
+                 
                 <h3>{this.state.article.title}</h3>
                 <p>{this.state.article.author}</p>
                 <p className="article-item-excerpt">{this.state.article.excerpt}</p>
             </div>
+            </Link>
     }
 }
 

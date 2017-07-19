@@ -48,8 +48,26 @@ const Query = new GraphQLObjectType({
   }),
 });
 
+const Mutation = new GraphQLObjectType({
+  name: 'Mutation',
+  description: 'mutation',
+  fields: () => ({
+    createArticle: {
+      type: articleType,
+      description: 'Create an article.',
+      args: {
+        article: { type: articleInputType },
+      },
+      resolve: (value, { article }) => {
+        return db.Article.create(article);
+      },
+    },
+  }),
+});
+
 const Schema = new GraphQLSchema({
   query: Query,
+  mutation: Mutation
 });
 
 export default Schema;
