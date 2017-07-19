@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import request from '../../request';
 import { ARTICLES_QUERY } from '../../queries';
-import './item.css';
+import './details.css';
+import { slugify } from '../../utils';
 
 class ArticleDetails extends Component {
     constructor({ match }) {
@@ -29,10 +30,15 @@ class ArticleDetails extends Component {
     }
 
     render() {
-        return <div className="article-item-container">
-                <h3>{this.state.title}</h3>
-                <p>{this.state.author}</p>
-                <p className="article-item-excerpt">{this.state.content}</p>
+        let tagsDom = this.state.tags.map(function (tag) {
+            return <p key={`tag-${slugify(tag)}`}>{tag}</p>
+        });
+        return <div className="article-detail-container">
+                <h2>{this.state.title}</h2>
+                <p><i>{this.state.author}</i></p>
+                <p>{this.state.content}</p>
+                <div className="article-detail-tags">{tagsDom}</div>
+                
             </div>
     }
 }

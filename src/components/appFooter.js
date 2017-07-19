@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import './main-styles.css';
 
 class AppFooter extends Component {
 
     render() {
-        return <div>
+        return <footer className="main-footer">
                 <p>Code test for Billin.</p>
-            </div>
+            </footer>
     }
 }
 
