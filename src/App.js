@@ -1,21 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import AppHeader from './components/appHeader';
 import AppFooter from './components/appFooter';
-import ArticleList from './components/articles/list';
+import ViewArticleList from './containers/articleList';
 
-class App extends Component {
-
-
-  // Renders
-  render() {
-    return (
-      <div className="App">
-        <AppHeader />
-        <ArticleList />
-        <AppFooter />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="App">
+    <AppHeader />
+    <ViewArticleList />
+    <AppFooter />
+  </div>  
+)
 
 export default App;

@@ -1,33 +1,22 @@
-import React, { Component } from 'react';
-import request from '../../request';
-import { ARTICLES_QUERY } from '../../queries';
-import ArticleItem from './item.js';
-import './list.css';
+import React, { PropTypes } from 'react'
+import ArticleItem from './item.js'
+import './list.css'
 
-class ArticleList extends Component {
-      // definition
-    constructor(props) {
-        super(props);
-        this.state = {
-            articles: [],
-        };
-    }
+const ArticleList = ({articles}) =>  (
+    <div className="article-list-container">
+         {(articles || []).map(article => 
+            <ArticleItem key={article.id} article={article} />
+        )} 
+    </div> 
+)
 
-    // lifecycle
-    componentWillMount() {
-        request(ARTICLES_QUERY).then(response => {
-            this.setState({ articles: response.data.articles });
-        });
-    }
-    render() {
-        let articleComponents = this.state.articles.map(function (article) {
-            return <ArticleItem article={article} />
-        })
-
-        return <div className="article-list-container">
-                {articleComponents}
-            </div>
-    }
+ArticleList.PropTypes = {
+    articles: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        author: PropTypes.string.isRequired,
+        excerpt: PropTypes.string.isRequired
+    }).isRequired).isRequired
 }
 
-export default ArticleList;
+export default ArticleList
