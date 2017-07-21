@@ -3,7 +3,7 @@ const initialState = {
     isLoaded: false
 }
 
-export function articlesReducer(state = initialState, action) {
+export default function articlesListReducer(state = initialState, action) {
 
     switch (action.type) {
         case 'REQUEST_ARTICLES':
@@ -19,4 +19,5 @@ export function articlesReducer(state = initialState, action) {
         default:
             return state
     }
+        return state;
 }

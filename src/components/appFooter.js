@@ -1,12 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class AppFooter extends Component {
-
-    render() {
-        return <div>
-                <p>Code test for Billin.</p>
-            </div>
-    }
-}
-
-export default AppFooter;
+export const AppFooter = () => (
+    <footer className="main-footer">
+        <p>Code test for Billin.</p>
+    </footer>
+)

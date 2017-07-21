@@ -4,5 +4,7 @@ export const ARTICLES_QUERY = `{
     excerpt
     id
     title
+    content
+    tags
   }
 }`;

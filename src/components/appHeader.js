@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-class AppHeader extends Component {
+import './main-styles.css';
 
-    render() {
-        return <div>
-                <h1>Code Challenge!</h1>
-            </div>
-    }
-}
-
-export default AppHeader;
+export const AppHeader = () => (
+    <header className="main-header">
+        <Link to="/">
+            <h1>Code Challenge!</h1>
+        </Link>
+    </header>
+)

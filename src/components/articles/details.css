@@ -1,0 +1,19 @@
+
+.article-detail-container {
+    margin-left: 50px;
+    margin-right: 50px; 
+}
+
+.article-detail-tags p {
+    float:left;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.article-detail-tags p:hover {
+    cursor: default;
+    background-color: grey;
+    color: white;
+}
