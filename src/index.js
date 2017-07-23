@@ -3,8 +3,8 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { BrowserRouter, Route } from 'react-router-dom'
 
-import App from './App';
-import store from './store';
+import App from './base/App';
+import store from './base/store';
 
 
 render(

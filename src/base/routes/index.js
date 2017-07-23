@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
-import ArticleList from '../features/articles/containers/articleList'
-import ArticleDetails from '../features/articles/containers/articleDetails'
+import ArticleList from '../../features/articles/containers/articleList'
+import ArticleDetails from '../../features/articles/containers/articleDetails'
 
 export const routes = () => (
     <main>

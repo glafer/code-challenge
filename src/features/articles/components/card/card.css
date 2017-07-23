@@ -1,6 +1,6 @@
 .article-item-container {
-    height: 200px;
-    width: 300px;
+    height: 250px;
+    width: 350px;
     margin: 1.5em; 
     display: inline-block;
     border: solid 1px grey;
@@ -14,6 +14,6 @@
 .article-item-excerpt {
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 7;
     -webkit-box-orient: vertical; 
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { slugify } from '../../../../utils'
+import { slugify } from '../../../../base/utils'
 
 export const Tags = ({tags = []}) => (
     <div className="article-detail-tags">
