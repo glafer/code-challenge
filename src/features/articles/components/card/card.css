@@ -2,11 +2,14 @@
     height: 200px;
     width: 300px;
     margin: 1.5em; 
-    display: inline-block;;
+    display: inline-block;
     border: solid 1px grey;
     padding: 15px;
     text-align: left;
+    text-decoration: none;
+    color: black;
 }
+
 
 .article-item-excerpt {
     overflow: hidden;

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import './main-styles.css';
+import './main-styles.css'
 
 export const AppHeader = () => (
     <header className="main-header">

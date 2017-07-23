@@ -1,12 +1,14 @@
 import React from 'react'
-import { Route } from 'react-router'
+import { Route, Switch } from 'react-router-dom'
 
 import ArticleList from '../features/articles/containers/articleList'
 import ArticleDetails from '../features/articles/containers/articleDetails'
 
 export const routes = () => (
     <main>
-      <Route exact path="/" component={ArticleList} />
-      <Route path="/:id" component={ArticleDetails} />
+      <Switch>
+        <Route exact path="/" component={ArticleList} />
+        <Route path="/:id" component={ArticleDetails} />
+      </Switch>
     </main>
 )
