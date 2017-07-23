@@ -20,7 +20,7 @@ const articleListTestData = [ articleCardTestData1, articleCardTestData2]
 
 describe('Article List', () => {
     it('renders without crashing', () => {
-        const div = document.createElement('div');
-        ReactDOM.render(<ArticleList articles={articleListTestData} />, div);
+        const div = document.createElement('div')
+        ReactDOM.render(<ArticleList articles={articleListTestData} />, div)
     });
 })

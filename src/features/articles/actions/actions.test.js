@@ -1,10 +1,10 @@
-import * as actionsTypes from './actionTypes';
-import * as actions from './index';
+import * as actionsTypes from './actionTypes'
+import * as actions from './index'
 
 describe('Articles actions', () => {
   it('should create an action for request articles', () => {
-    let expectedAction = { type: actionsTypes.REQUEST_ARTICLES };
-    expect(actions.requestArticles()).toEqual(expectedAction);
+    let expectedAction = { type: actionsTypes.REQUEST_ARTICLES }
+    expect(actions.requestArticles()).toEqual(expectedAction)
   });
 
   it('should create an action for receive articles', () => {
@@ -25,8 +25,8 @@ describe('Articles actions', () => {
 
   it('should create an action for request articles', () => {
     let articleId = 'id'
-    let expectedAction = { type: actionsTypes.REQUEST_ARTICLES };
-    expect(actions.requestArticles(articleId)).toEqual(expectedAction);
+    let expectedAction = { type: actionsTypes.REQUEST_ARTICLES }
+    expect(actions.requestArticles(articleId)).toEqual(expectedAction)
   });
 
   it('should create an action for receive single article', () => {

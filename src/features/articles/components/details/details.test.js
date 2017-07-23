@@ -12,6 +12,6 @@ const articleDetailsTestData = {
 describe('Article Details', () => {
     it('renders without crashing', () => {
         const div = document.createElement('div');
-        ReactDOM.render(<ArticleDetails id="id" article={articleDetailsTestData} />, div);
-    });
+        ReactDOM.render(<ArticleDetails id="id" article={articleDetailsTestData} />, div)
+    })
 })
