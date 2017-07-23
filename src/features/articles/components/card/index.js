@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import './item.css';
+import './card.css'
 
-export const ArticleItem = ({article}) => (
+export const ArticleCard = ({article}) => (
     <Link to={`/${article.id}`}>
         <div className="article-item-container">
             <h3>{article.title}</h3>
