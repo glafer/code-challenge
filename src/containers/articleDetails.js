@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import ArticleDetails from '../components/articles/details'
 
 import { loadArticle } from '../actions/'
-import {ARTICLES_QUERY} from '../queries'
+import {ARTICLE_QUERY} from '../queries'
 
 const mapStateToProps = (state, ownProps) => {
     console.log(state);
@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        onLoad: dispatch(loadArticle(ownProps.match.params.id, ARTICLES_QUERY))
+        onLoad: dispatch(loadArticle(ownProps.match.params.id, ARTICLE_QUERY(ownProps.match.params.id)))
     }
 }
 
